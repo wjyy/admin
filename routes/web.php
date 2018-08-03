@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get("/admin","LoginController@admin");//登录路由
+Route::get("/login","LoginController@login");//登录路由
