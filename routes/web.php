@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("/admin","LoginController@admin");//登录路由
-Route::get("/login","LoginController@login");//登录路由
+Route::get("/admin","LoginController@admin");//登录界面路由
+Route::post("/dologin","LoginController@dologin");//登录验证
+Route::get('/captcha/{tmp}', 'LoginController@captcha');//验证码
 Route::get("/Students","StudentsController@Students");//登录路由
