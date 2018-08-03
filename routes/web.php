@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get("/admin","LoginController@admin");//登录路由
 Route::get("/login","LoginController@login");//登录路由
+Route::get("/Students","StudentsController@Students");//登录路由
