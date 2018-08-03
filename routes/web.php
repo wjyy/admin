@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("/admin","LoginController@admin");//登录路由
-Route::get("/login","LoginController@login");//登录路由
-Route::get("/Students","StudentsController@Students");//登录路由
+Route::get("/Index","IndexController@ind");//首页路由
+Route::get("/admin","LoginController@admin");//登录页面路由
+Route::get("/Students","StudentsController@Students");//添加学生信息路由
