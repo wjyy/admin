@@ -19,7 +19,7 @@ Route::post("/dologin","LoginController@dologin");//登录验证
 Route::get('/captcha/{tmp}', 'LoginController@captcha');//验证码
 Route::get("/Index","IndexController@ind");//首页路由
 Route::get("/admin","LoginController@admin");//登录页面路由
-<<<<<<< HEAD
+
 
 Route::get("/students","StudentsController@students");//添加页面路由
 
@@ -35,4 +35,4 @@ Route::post("/up_stu","StudentsController@up_stu");//修改学生路由
 =======
 Route::get("/Students","StudentsController@Students");//添加学生信息路由
 
->>>>>>> e8e77969a229c63653d30fbaa0f550ab17f7e2ec
+
