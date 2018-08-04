@@ -14,15 +14,22 @@ class LoginController extends Controller{
         $person = (array)$person;
         if(!empty($person)){
             if(md5(md5($data['password'])."123456")==$person['password']){
-                $request->session()->put('username', $person['username']);
-                $request->session()->save();
-                return redirect()->to('user');
+//                $request->session()->put('username', $person['username']);
+//                $request->session()->save();
+                session(['username'=>$person['username']]);
+//                echo 123;
+//                echo session('username');die;
+                return redirect()->to('index');
             }else{
                 echo "Password is wrong!";
             }
         }else{
             echo "Username is undefind!";
         }
+    }
+    public function logout(Request $request){
+        $request->session()->forget('username');
+        return redirect()->to('admin');
     }
     public function captcha($tmp)
     {
