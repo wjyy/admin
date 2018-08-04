@@ -4,13 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title> OA教务系统</title>
     <meta name="Copyright" content="Douco Design." />
-    <link href="css/public.css" rel="stylesheet" type="text/css">
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/global.js"></script>
 </head>
 <body>
 <div id="dcWrap">
     <div id="dcHead">
         <div id="head">
-            <div class="logo"><a href="index.html"><img src="images/dclogo.gif" alt="logo"></a></div>
+            <div class="logo"><a href="index.html"><img src="/images/dclogo.gif" alt="logo"></a></div>
             <div class="nav">
                 <ul>
                     <li class="M"><a href="JavaScript:void(0);" class="topAdd">新建</a>
@@ -22,13 +24,13 @@
                     <li class="noRight"><a href="module.html">DouPHP+</a></li>
                 </ul>
                 <ul class="navRight">
-                    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+                    <li class="M noLeft"><a href="JavaScript:void(0);">您好，{{session('username')}}</a>
                         <div class="drop mUser">
                             <a href="manager.php?rec=edit&id=1">编辑我的个人资料</a>
                             <a href="manager.php?rec=cloud_account">设置云账户</a>
                         </div>
                     </li>
-                    <li class="noRight"><a href="login.php?rec=logout">退出</a></li>
+                    <li class="noRight"><a href="/logout">退出</a></li>
                 </ul>
             </div>
         </div>
@@ -43,11 +45,11 @@
 
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>班级管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>教师管理</em></a></li>
+                <li><a href="{{url('/class')}}"><i class="articleCat"></i><em>班级管理</em></a></li>
+                <li><a href="{{url('/teachers')}}"><i class="article"></i><em>教师管理</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>财务管理</em></a></li>
+                <li><a href=""><i class="articleCat"></i><em>财务管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>权限管理</em></a></li>
             </ul>
             <ul>
