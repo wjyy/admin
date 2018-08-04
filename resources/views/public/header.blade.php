@@ -37,9 +37,7 @@
             <ul class="top">
                 <li><a href="{{url('/index')}}"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
-
             <ul>
-
                 <li class="cur"><a href="{{url('/studlist')}}"><i class="productCat"></i><em>学生管理</em></a></li>
                 <li><a href="{{url('/dorm')}}"><i class="product"></i><em>宿舍管理</em></a></li>
 
