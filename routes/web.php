@@ -32,7 +32,7 @@ Route::get("/del_stu/{id}","StudentsController@del_stu");//删除学生路由
 Route::get("/stu_up/{id}","StudentsController@stu_up");//修改学生页面路由
 
 Route::post("/up_stu","StudentsController@up_stu");//修改学生路由
-=======
+
 Route::get("/Students","StudentsController@Students");//添加学生信息路由
 
 
