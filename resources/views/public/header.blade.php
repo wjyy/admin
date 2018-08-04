@@ -41,7 +41,7 @@
             </ul>
 
             <ul>
-                <li class="cur"><a href="{{url('/Students')}}"><i class="productCat"></i><em>学生管理</em></a></li>
+                <li class="cur"><a href="{{url('/studlist')}}"><i class="productCat"></i><em>学生管理</em></a></li>
                 <li><a href="product.html"><i class="product"></i><em>宿舍管理</em></a></li>
             </ul>
             <ul>
