@@ -5,8 +5,6 @@
     <title> OA教务系统</title>
     <meta name="Copyright" content="Douco Design." />
     <link href="css/public.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="./public/js/jquery.min.js"></script>
-    <script type="text/javascript" src="./public/js/global.js"></script>
 </head>
 <body>
 <div id="dcWrap">
@@ -42,7 +40,7 @@
 
             <ul>
                 <li class="cur"><a href="{{url('/Students')}}"><i class="productCat"></i><em>学生管理</em></a></li>
-                <li><a href="product.html"><i class="product"></i><em>宿舍管理</em></a></li>
+                <li><a href="{{url('/dorm')}}"><i class="product"></i><em>宿舍管理</em></a></li>
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>班级管理</em></a></li>
@@ -52,5 +50,10 @@
                 <li><a href="article_category.html"><i class="articleCat"></i><em>财务管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>权限管理</em></a></li>
             </ul>
+            <ul>
+                <li><a href="article_category.html"><i class="articleCat"></i><em>电费管理</em></a></li>
+                <li><a href="article.html"><i class="article"></i><em>调班管理</em></a></li>
+                <li><a href="article.html"><i class="article"></i><em>调宿管理</em></a></li>
 
+            </ul>
         </div></div>

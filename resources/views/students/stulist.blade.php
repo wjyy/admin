@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>OA教务 管理中心</title>
     <meta name="Copyright" content="Douco Design." />
-    <link href="/admin/css/public.css" rel="stylesheet" type="text/css">
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/admin/js/jquery.min.js"></script>
     <script type="text/javascript" src="/admin/js/global.js"></script>
 </head>
