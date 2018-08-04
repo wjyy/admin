@@ -35,7 +35,7 @@ Route::post("/up_stu","StudentsController@up_stu");//修改学生路由
 
 Route::get("/Students","StudentsController@Students");//添加学生信息路由
 
-<<<<<<< HEAD
+
 //宿舍管理
 Route::get("/dorm","DormController@dorm_list");//宿舍列表信息路由
 Route::get("/add_dorm","DormController@add_dorm");//宿舍信息添加路由
@@ -45,6 +45,6 @@ Route::get("/dorm_upd/{id}","DormController@dorm_upd");//宿舍列表修改路�
 Route::post("/dormupd/","DormController@dormupd");//宿舍列表修改路由
 
 
-=======
->>>>>>> 082935a8991bb7c1bb4b431412e352a32c103b52
+
+
 
