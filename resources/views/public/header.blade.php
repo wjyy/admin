@@ -39,8 +39,13 @@
             </ul>
 
             <ul>
+<<<<<<< HEAD
                 <li class="cur"><a href="{{url('/Students')}}"><i class="productCat"></i><em>学生管理</em></a></li>
                 <li><a href="{{url('/dorm')}}"><i class="product"></i><em>宿舍管理</em></a></li>
+=======
+                <li class="cur"><a href="{{url('/studlist')}}"><i class="productCat"></i><em>学生管理</em></a></li>
+                <li><a href="product.html"><i class="product"></i><em>宿舍管理</em></a></li>
+>>>>>>> 082935a8991bb7c1bb4b431412e352a32c103b52
             </ul>
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>班级管理</em></a></li>
