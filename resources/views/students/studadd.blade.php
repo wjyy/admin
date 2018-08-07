@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>OA教务 管理中心</title>
     <meta name="Copyright" content="Douco Design." />
+    <link rel="stylesheet" type="text/css" href="/css/calender.css" />
     <link href="/admin/css/public.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/admin/js/jquery.min.js"></script>
     <script type="text/javascript" src="/admin/js/global.js"></script>
@@ -12,7 +13,7 @@
         @include('public/header');
 <div id="dcMain">
     <!-- 当前位置 -->
-    <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <div id="urHere">DouPHP 管理中心<b>></b><strong>添加学生</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
         <form action="/add_stu" method="post">
             {{ csrf_field() }}
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
@@ -30,8 +31,16 @@
                 </tr>
                 <tr>
                     <td width="80" align="right">性别</td>
+                    {{--<td>--}}
+                        {{--<input type="text" name="sex" value="" size="40" class="inpMain" />--}}
+                    {{--</td>--}}
                     <td>
-                        <input type="text" name="sex" value="" size="40" class="inpMain" />
+                        <label for="mobile_closed_1">
+                            <input type="radio" name="sex" id="mobile_closed_1" value="0" checked="true">
+                            男</label>
+                        <label for="mobile_closed_0">
+                            <input type="radio" name="sex" id="mobile_closed_0" value="1">
+                            女</label>
                     </td>
                 </tr>
                 <tr>
@@ -61,25 +70,25 @@
                 <tr>
                     <td align="right">入学日期</td>
                     <td>
-                        <input type="text" name="enterdate" value="" size="40" class="inpMain" />
+                        <input type="text" id="inp1" name="enterdate"  class="inpMain" placeholder="选择日期">
                     </td>
                 </tr>
                 <tr>
                     <td align="right">退学、毕业日期</td>
                     <td>
-                        <input type="text" name="leavedate" value="" size="40" class="inpMain" />
+                        <input type="text" id="inp2" name="leavedate" class="inpMain" placeholder="选择日期">
                     </td>
                 </tr>
                 <tr>
                     <td align="right">入住日期</td>
                     <td>
-                        <input type="text" name="checkindate" value="" size="40" class="inpMain" />
+                        <input type="text" id="inp3" name="checkindate" class="inpMain" placeholder="选择日期">
                     </td>
                 </tr>
                 <tr>
                     <td align="right">退宿日期</td>
                     <td>
-                        <input type="text" name="checkoutdate" value="" size="40" class="inpMain" />
+                        <input type="text" id="inp4" name="checkoutdate" class="inpMain" placeholder="选择日期">
                     </td>
                 </tr>
                 <tr>
@@ -87,11 +96,15 @@
                     <td>
                         <select name="sid">
                             <option value="0">无</option>
-                            <option value="1"> 电子数码</option>
-                            <option value="4">- 智能手机</option>
-                            <option value="5">- 平板电脑</option>
-                            <option value="2"> 家居百货</option>
-                            <option value="3"> 母婴用品</option>
+                            @foreach($arr as $b)
+                            <option value="{{ $b->c_id }}">{{ $b->title }}</option>
+                            @endforeach
+                            {{--<option value="0">无</option>--}}
+                            {{--<option value="1"> 电子数码</option>--}}
+                            {{--<option value="4">- 智能手机</option>--}}
+                            {{--<option value="5">- 平板电脑</option>--}}
+                            {{--<option value="2"> 家居百货</option>--}}
+                            {{--<option value="3"> 母婴用品</option>--}}
                         </select>
                     </td>
                 </tr>
@@ -100,11 +113,15 @@
                     <td>
                         <select name="did">
                             <option value="0">无</option>
-                            <option value="1"> 电子数码</option>
-                            <option value="4">- 智能手机</option>
-                            <option value="5">- 平板电脑</option>
-                            <option value="2"> 家居百货</option>
-                            <option value="3"> 母婴用品</option>
+                            @foreach($data as $v)
+                                <option value="{{ $v->d_id }}">{{ $v->dorm }}</option>
+                            @endforeach
+                            {{--<option value="0">无</option>--}}
+                            {{--<option value="1"> 电子数码</option>--}}
+                            {{--<option value="4">- 智能手机</option>--}}
+                            {{--<option value="5">- 平板电脑</option>--}}
+                            {{--<option value="2"> 家居百货</option>--}}
+                            {{--<option value="3"> 母婴用品</option>--}}
                         </select>
                     </td>
                 </tr>
@@ -130,3 +147,43 @@
 <div class="clear"></div> </div>
 </body>
 </html>
+<script src="/js/calender.js"></script>
+<script>
+    // calender('#inp').init(function(date){this.value= date});
+    calender('#inp1').init(
+            {format : 'yyyy-MM-dd',
+                date : [2018,8,8],
+                //button : true
+            },
+            function(date){
+                this.value= date
+            }
+    );
+    calender('#inp2').init(
+            {format : 'yyyy-MM-dd',
+                date : [2018,8,8],
+                //button : true
+            },
+            function(date){
+                this.value= date
+            }
+    );
+    calender('#inp3').init(
+            {format : 'yyyy-MM-dd',
+                date : [2018,8,8],
+                //button : true
+            },
+            function(date){
+                this.value= date
+            }
+    );
+    calender('#inp4').init(
+            {format : 'yyyy-MM-dd',
+                date : [2018,8,8],
+                //button : true
+            },
+            function(date){
+                this.value= date
+            }
+    );
+</script>

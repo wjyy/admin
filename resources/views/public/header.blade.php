@@ -55,7 +55,7 @@
             <ul>
                 <li><a href="article_category.html"><i class="articleCat"></i><em>电费管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>调班管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>调宿管理</em></a></li>
+                <li><a href="{{url('/changedorm')}}"><i class="article"></i><em>调宿管理</em></a></li>
 
             </ul>
         </div></div>

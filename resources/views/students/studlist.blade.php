@@ -12,8 +12,8 @@
 @include('public/header');
 <div id="dcMain">
     <!-- 当前位置 -->
-    <div id="urHere">DouPHP 管理中心<b>></b><strong>商品列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-        <h3><a href="{{ url('students') }}" class="actionBtn add">添加商品</a>商品列表</h3>
+    <div id="urHere">DouPHP 管理中心<b>></b><strong>学生列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <h3><a href="{{ url('students') }}" class="actionBtn add">添加学生</a>学生列表</h3>
 
         <div id="list">
 
@@ -41,17 +41,18 @@
                         <td align="center"><input type="checkbox" name="checkbox[]" value="15" /></td>
                         <td align="center">15</td>
                         <td><a href="#">{{ $v->name }}</a></td>
-                        <td>{{ $v->sex }}</td>
                         <td>{{ $v->age }}</td>
+                        {{--<td>{{ $v->sex }}</td>--}}
+                        <td><?php if($v->sex==0){echo "男";}elseif($v->sex==1){echo "女";}?></td>
                         <td>{{ $v->phone }}</td>
                         <td>{{ $v->IDcard }}</td>
                         <td>{{ $v->address }}</td>
-                        <td>{{ $v->enterdate }}</td>
-                        <td>{{ $v->leavedate }}</td>
-                        <td>{{ $v->checkindate }}</td>
-                        <td>{{ $v->checkoutdate }}</td>
-                        <td>{{ $v->sid }}</td>
-                        <td>{{ $v->did }}</td>
+                        <td>{{ date("Y-m-d",$v->enterdate) }}</td>
+                        <td>{{ date("Y-m-d",$v->leavedate) }}</td>
+                        <td>{{ date("Y-m-d",$v->checkindate) }}</td>
+                        <td>{{ date("Y-m-d",$v->checkoutdate) }}</td>
+                        <td>{{ $v->title }}</td>
+                        <td>{{ $v->dorm }}</td>
                         <td align="center">
                             <a href="{{action('StudentsController@stu_up',[$v->id]) }}">编辑</a> | <a href="{{action('StudentsController@del_stu',[$v->id]) }}">删除</a>
                         </td>
