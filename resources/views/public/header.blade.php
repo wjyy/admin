@@ -58,13 +58,12 @@
                 <li><a href="article.html"><i class="article"></i><em>权限管理</em></a></li>
             </ul>
             <ul>
-<<<<<<< HEAD
+
                 <li><a href="{{url('/eletric')}}"><i class="articleCat"></i><em>电费管理</em></a></li>
-                <li><a href="article.html"><i class="article"></i><em>调班管理</em></a></li>
-=======
-                <li><a href="article_category.html"><i class="articleCat"></i><em>电费管理</em></a></li>
+
+
+                
                 <li><a href="{{url('/change_class')}}"><i class="article"></i><em>调班管理</em></a></li>
->>>>>>> wang
                 <li><a href="article.html"><i class="article"></i><em>调宿管理</em></a></li>
 
             </ul>
