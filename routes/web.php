@@ -22,9 +22,9 @@ Route::get('/captcha/{tmp}', 'LoginController@captcha');//验证码
 Route::get("/index","IndexController@ind");//首页路由
 
 
-Route::get("/students","StudentsController@students");//添加页面路由
-
 Route::get("/studlist","StudentsController@studlist");//学生列表路由
+
+Route::get("/students","StudentsController@students");//添加学生信息路由
 
 Route::post("/add_stu","StudentsController@add_stu");//添加学生跳转路由
 
@@ -33,8 +33,6 @@ Route::get("/del_stu/{id}","StudentsController@del_stu");//删除学生路由
 Route::get("/stu_up/{id}","StudentsController@stu_up");//修改学生页面路由
 
 Route::post("/up_stu","StudentsController@up_stu");//修改学生路由
-
-Route::get("/Students","StudentsController@Students");//添加学生信息路由
 
 
 //宿舍管理
@@ -46,21 +44,27 @@ Route::get("/dorm_upd/{id}","DormController@dorm_upd");//宿舍列表修改路�
 Route::post("/dormupd/","DormController@dormupd");//宿舍列表修改路由
 
 
-Route::get("/index","IndexController@ind");//首页路由
 
-Route::get("/students","StudentsController@students");//添加学生信息路由
 
+//班级管理
 Route::get("/class","ClassController@class");//班级列表展示
 Route::get("/addclassview","ClassController@addclassview");//班级添加页面
 Route::post("/addclass","ClassController@addclass");//班级添加
 Route::get('/delclass/{id}', 'ClassController@delclass');//删除班级单条数据
 Route::get('/updclassview/{id}', 'ClassController@updclassview');//修改班级单条数据页面
 Route::post('/updateclass', 'ClassController@updateclass');//修改班级单条数据页面
-
+//教师管理
 Route::get("/teachers","TeachersController@teachers");//教师列表展示
 Route::get("/addteaview","TeachersController@addteaview");//教师添加页面
 Route::post("/addtea","TeachersController@addtea");//教师添加
 Route::get("/updteaview{id}","TeachersController@updteaview");//教师修改页面
 Route::post("/updtea","TeachersController@updtea");//教师修改
 Route::get("/deltea/{id}","TeachersController@deltea");//教师删除
+//电费管理
+Route::get("/eletric","EletricController@eletric");//宿舍电费列表展示
+Route::get("/addeleview","EletricController@addeleview");//宿舍电费添加页面
+Route::post("/addele","EletricController@addele");//宿舍电费添加
+Route::get("/updeleview/{d}","EletricController@updeleview");//宿舍电费修改页面
+Route::post("/updateele","EletricController@updateele");//宿舍电费修改
+
 

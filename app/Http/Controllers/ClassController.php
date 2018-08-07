@@ -48,9 +48,8 @@ class ClassController extends Controller{
         }else{
             $class = DB::table('class')->where('cid',$id)->first();
             $teachers = DB::table('teachers')->get();
-            $data['class'] = $class;
-            $data['teachers'] = $teachers;
-            return view("class.updclassview",["data"=>$data]);
+//            print_r($data);die;
+            return view("class.updclassview",["class"=>$class],["teachers"=>$teachers]);
         }
     }
     function updateclass(){

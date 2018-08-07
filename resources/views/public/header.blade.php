@@ -5,8 +5,8 @@
     <title> OA教务系统</title>
     <meta name="Copyright" content="Douco Design." />
     <link href="/css/public.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/public/js/global.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/global.js"></script>
 </head>
 <body>
 <div id="dcWrap">
@@ -53,7 +53,7 @@
                 <li><a href="article.html"><i class="article"></i><em>权限管理</em></a></li>
             </ul>
             <ul>
-                <li><a href="article_category.html"><i class="articleCat"></i><em>电费管理</em></a></li>
+                <li><a href="{{url('/eletric')}}"><i class="articleCat"></i><em>电费管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>调班管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>调宿管理</em></a></li>
 
