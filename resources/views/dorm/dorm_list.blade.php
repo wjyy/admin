@@ -114,7 +114,7 @@
         {{--<th align="left">宿舍编号</th>--}}
           <th align="left">学生编号</th>
           <th align="left">学生姓名</th>
-          <th align="left">区域名称</th>
+
           <th align="left">宿舍现有人数</th>
           <th align="left">宿舍最多限制人数</th>
 
@@ -127,7 +127,7 @@
         <td align="center">{{$v->dorm}}</td>
         <td><a href="product.php?rec=edit&id=15">{{$v->stuid}}</a></td>
                 <td><a href="product.php?rec=edit&id=15">{{$v->name}}</a></td>
-                <td><a href="product.php?rec=edit&id=15">{{$v->area_name}}</a></td>
+
                 <th align="left">{{$v->stunum}}</th>
                 <th align="left">{{$v->maxnum}}</th>
 

@@ -8,17 +8,17 @@ class DormController extends Controller
     //宿舍信息列表
     function  dorm_list(){
         $data=DB::table('dormitory')
-            ->join('dormitory_cate','dormitory.cat_id','=','dormitory_cate.cate_id')
-            ->join('students','students.stuid','=','dormitory.stuid')
+
+            ->join('students','students.did','=','dormitory.d_id')
             ->paginate(2);
         //dd($data);die;
         return view('dorm.dorm_list',['data'=>$data]);
     }
     //宿舍信息添加页面展示
     function add_dorm(){
-        $data=DB::table('dormitory_cate')->get();
+        ;
 
-        return view('dorm.add_dorm',['data'=>$data]);
+        return view('dorm.add_dorm');
     }
     //宿舍信息做添加
     function addorm(Request $request){
@@ -43,8 +43,8 @@ class DormController extends Controller
     function dorm_upd(Request $request,$id){
         $id=$request->id;
         $data1=DB::table('dormitory')->where('d_id',$id)->first();
-        $data=DB::table('dormitory_cate')->get();
-        return view('dorm.dorm_upd',['info'=>$data1,'data'=>$data]);
+
+        return view('dorm.dorm_upd',['info'=>$data1]);
     }
     function dormupd(Request $request){
         $data=$request->input();

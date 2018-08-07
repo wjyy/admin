@@ -47,14 +47,24 @@
             <ul>
                 <li><a href="{{url('/class')}}"><i class="articleCat"></i><em>班级管理</em></a></li>
                 <li><a href="{{url('/teachers')}}"><i class="article"></i><em>教师管理</em></a></li>
+               
+            </ul>
+            <ul>
+                  <li><a href="{{url('/course_cate')}}"><i class="articleCat"></i><em>课程分类管理</em></a></li>
+                <li><a href="{{url('/course')}}"><i class="article"></i><em>课程内容管理</em></a></li>
             </ul>
             <ul>
                 <li><a href=""><i class="articleCat"></i><em>财务管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>权限管理</em></a></li>
             </ul>
             <ul>
+<<<<<<< HEAD
                 <li><a href="{{url('/eletric')}}"><i class="articleCat"></i><em>电费管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>调班管理</em></a></li>
+=======
+                <li><a href="article_category.html"><i class="articleCat"></i><em>电费管理</em></a></li>
+                <li><a href="{{url('/change_class')}}"><i class="article"></i><em>调班管理</em></a></li>
+>>>>>>> wang
                 <li><a href="article.html"><i class="article"></i><em>调宿管理</em></a></li>
 
             </ul>

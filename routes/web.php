@@ -22,6 +22,7 @@ Route::get('/captcha/{tmp}', 'LoginController@captcha');//验证码
 Route::get("/index","IndexController@ind");//首页路由
 
 
+
 Route::get("/studlist","StudentsController@studlist");//学生列表路由
 
 Route::get("/students","StudentsController@students");//添加学生信息路由
@@ -33,6 +34,9 @@ Route::get("/del_stu/{id}","StudentsController@del_stu");//删除学生路由
 Route::get("/stu_up/{id}","StudentsController@stu_up");//修改学生页面路由
 
 Route::post("/up_stu","StudentsController@up_stu");//修改学生路由
+
+
+
 
 
 //宿舍管理
@@ -66,5 +70,26 @@ Route::get("/addeleview","EletricController@addeleview");//宿舍电费添加页
 Route::post("/addele","EletricController@addele");//宿舍电费添加
 Route::get("/updeleview/{d}","EletricController@updeleview");//宿舍电费修改页面
 Route::post("/updateele","EletricController@updateele");//宿舍电费修改
+
+
+
+//调班管理
+Route::get("/change_class","ChangeclassController@ch_class");//调班列表页面
+Route::match(['get','post'],"/change_add","ChangeclassController@change_add");//添加调班学员页面
+Route::match(['get','post'],"/change_upd/{id}","ChangeclassController@change_upd");//添加调班学员页面
+
+//课程分类管理
+Route::get("/course_cate","CoursecateController@cate_list");//课程分类列表路由
+Route::match(['get','post'],"/cate_add","CoursecateController@cate_add");//添加课程分类路由
+Route::get("/course_del/{id}","CoursecateController@del");//课程分类列表删除路由
+Route::match(['get','post'],"/cate_upd/{id}","CoursecateController@cate_upd");//课程分类列表修改路由
+
+//课程管理
+Route::get("/course","CourseController@course_list");//课程内容列表路由
+Route::match(['get','post'],"/course_add","CourseController@course_add");//添加课程内容路由
+Route::get("/co_del/{id}","CourseController@del");//课程列表删除路由
+Route::match(['get','post'],"/co_upd/{id}","CourseController@upd");//课程列表删除路由
+
+
 
 

@@ -15,32 +15,14 @@
         <form action="addorm" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
                 <tr>
                     <td width="80" align="right">宿舍编号</td>
                     <td>
-                        <input type="text" name="dorm" value="" size="40" class="inpMain" />
+                        <input type="text" name="dorm" value="" size="40" class="inpMain" /><span>注：添加宿舍时请以A区101室为标准</span>
                     </td>
                 </tr>
-                <tr>
-                    <td width="80" align="right">宿舍区域</td>
-                    <td>
-                        <select name="cat_id" id="">
-                            @foreach($data as $v)
-                            <option value="{{$v->cate_id}}">{{$v->area_name}}</option>
-                            @endforeach
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="80" align="right">宿舍楼层</td>
-                    <td>
-                        <select name="f_id" id="">
-                            @foreach($data as $v)
-                                <option value="{{$v->f_id}}">{{$v->floor_name}}</option>
-                            @endforeach
-                        </select>
-                    </td>
-                </tr>
+
                 <tr>
                     <td align="right">宿舍最多限制人数</td>
                     <td>

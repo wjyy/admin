@@ -17,38 +17,14 @@
             {{csrf_field()}}
             {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
                 <tr>
-                    <td width="80" align="right">宿舍编号</td>
+                    <td width="80" align="right">宿舍名称</td>
                     <td>
                         <input type="text" name="dorm" size="40" class="inpMain" value="{{$info->dorm}}" />
                     </td>
                 </tr>
-                <tr>
-                    <td width="80" align="right">宿舍区域</td>
-                    <td>
-                        <select name="cat_id" id="">
-                            @foreach($data as $v)
-                                <option value="{{$v->cate_id}}"  <?php
-                                        if($v->cate_id==$info->cat_id){echo "selected='selected'";}
-                                        ?>>{{$v->area_name}}</option>
-                            @endforeach
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="80" align="right">宿舍楼层</td>
-                    <td>
-                        <select name="f_id" id="">
-                            @foreach($data as $v)
-                                <option value="{{$v->f_id}}"
-                                    <?php
-                                        if($v->f_id==$info->f_id){echo "selected='selected'";}
-                                    ?>>
-                                    {{$v->floor_name}}</option>
-                            @endforeach
-                        </select>
-                    </td>
-                </tr>
+
                 <tr>
                 <td align="right">宿舍现有人数</td>
                 <td>
