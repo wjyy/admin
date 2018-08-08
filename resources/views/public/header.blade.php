@@ -54,7 +54,7 @@
                 <li><a href="{{url('/course')}}"><i class="article"></i><em>课程内容管理</em></a></li>
             </ul>
             <ul>
-                <li><a href=""><i class="articleCat"></i><em>财务管理</em></a></li>
+                <li><a href="{{url('/tuition_list')}}"><i class="articleCat"></i><em>费用管理</em></a></li>
                 <li><a href="article.html"><i class="article"></i><em>权限管理</em></a></li>
             </ul>
             <ul>
@@ -63,7 +63,7 @@
                 <li><a href="{{url('/eletric')}}"><i class="articleCat"></i><em>电费管理</em></a></li>
 
 
-                
+
                 <li><a href="{{url('/change_class')}}"><i class="article"></i><em>调班管理</em></a></li>
 
 

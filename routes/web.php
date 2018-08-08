@@ -91,3 +91,9 @@ Route::get("/changedorm","ChangedormController@changedorm");//调宿列表路由
 Route::get("/chang_up/{id}","ChangedormController@chang_up");//调宿页面路由
 Route::post("/up_chang","ChangedormController@up_chang");//添加日志路由
 
+//学费管理
+Route::get("/tuition_list","TuitionController@tuition_list");//学费列表路由
+Route::match(['get','post'],"/tuition_add","TuitionController@tuition_add");//学费添加路由
+Route::match(['get','post'],"/tuition_upd/{id}","TuitionController@tuition_upd");//学费添加路由
+
+
