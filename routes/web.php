@@ -78,6 +78,7 @@ Route::get("/course","CourseController@course_list");//课程内容列表路由
 Route::match(['get','post'],"/course_add","CourseController@course_add");//添加课程内容路由
 Route::get("/co_del/{id}","CourseController@del");//课程列表删除路由
 Route::match(['get','post'],"/co_upd/{id}","CourseController@upd");//课程列表删除路由
+//Route::match(['get','post'],"/co_upd/{id}","CourseController@upd");//课程列表删除路由
 
 
 
